@@ -1,0 +1,24 @@
+{
+  "name": "lab-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server/ && npm start\" \"cd client/ && npm start\"",
+    "stop": "cd server/ && npm run stop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plamch/lab-management.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plamch/lab-management/issues"
+  },
+  "homepage": "https://github.com/plamch/lab-management#readme",
+  "dependencies": {
+    "concurrently": "7.2.2"
+  }
+}
