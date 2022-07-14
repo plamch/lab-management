@@ -1,12 +1,7 @@
 module.exports = {
     root: true,
-    parser: '@typescript-eslint/parser',
-    parserOptions: { sourceType: 'module' },
-    plugins: ['@typescript-eslint'],
-    extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
     env: {
         es2022: true,
-        node: true,
     },
     rules: {
         eqeqeq: ['warn', 'smart'],
@@ -38,6 +33,4 @@ module.exports = {
         'prefer-template': 'warn',
         'prefer-object-has-own': 'warn',
     },
-    // TODO: husky with lint-staged
-    // TODO: fix all eslint and TS errors
 }
