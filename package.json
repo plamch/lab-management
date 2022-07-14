@@ -8,7 +8,11 @@
   },
   "scripts": {
     "start": "concurrently \"cd server/ && npm start\" \"cd client/ && npm start\"",
-    "stop": "cd server/ && npm run stop"
+    "stop": "cd server/ && npm run stop",
+    "eslint:check": "eslint --ext .js,.jsx,.ts,.tsx . --report-unused-disable-directives",
+    "eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix",
+    "prettier:check": "prettier . --ignore-unknown --check",
+    "prettier:fix": "prettier . --ignore-unknown --write"
   },
   "repository": {
     "type": "git",
@@ -22,6 +26,10 @@
   },
   "homepage": "https://github.com/plamch/lab-management#readme",
   "dependencies": {
-    "concurrently": "7.2.2"
+    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "@typescript-eslint/parser": "5.30.6",
+    "concurrently": "7.2.2",
+    "eslint-config-prettier": "8.5.0",
+    "prettier": "2.7.1"
   }
 }
