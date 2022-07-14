@@ -1,8 +1,8 @@
-import express from "express";
+import express from 'express'
 
-export const indexRouter = express.Router();
+export const indexRouter = express.Router()
 
 /* GET home page. */
-indexRouter.get("/", (req, res) => {
-  res.send("respond with a resource - index");
-});
+indexRouter.get('/', (req, res) => {
+    res.send('respond with a resource - index')
+})
