@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { store } from './app/store'
-import App from './App'
+import { App } from './App'
 
 test('renders learn react link', () => {
     render(
@@ -10,5 +10,5 @@ test('renders learn react link', () => {
         </Provider>
     )
 
-    expect(screen.getByText(/learn/i)).toBeInTheDocument()
+    expect(screen.getByText('Hello world!')).toBeInTheDocument()
 })
