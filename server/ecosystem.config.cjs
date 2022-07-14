@@ -2,12 +2,17 @@ module.exports = {
   apps: [
     {
       name: "server",
-      script: "bin/www.js",
-      watch: ["src", "prisma", "bin", "routes", "app.js"],
+      script: "npm",
+      watch: ["src", "prisma", "bin", "routes", "app.ts"],
       ignore_watch: ["node_modules", "logs"],
-      node_args: "--experimental-specifier-resolution=node",
+      args: "run start",
       env: {
         TZ: "UTC",
+        NODE_ENV: "development",
+      },
+      env_production: {
+        TZ: "UTC",
+        NODE_ENV: "production",
       },
     },
   ],

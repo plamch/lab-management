@@ -2,17 +2,30 @@
   "name": "server",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "pm2 start ecosystem.config.cjs && pm2 logs",
+    "start-prod": "pm2 start ecosystem.config.cjs --env production && pm2 logs",
+    "ts-node": "node -r ts-node/register/transpile-only --loader ts-node/esm/transpile-only --unhandled-rejections=strict --experimental-specifier-resolution=node ./bin/www.ts",
     "stop": "pm2 stop server",
     "monitor": "pm2 monit",
     "logs": "pm2 logs"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1",
-    "pm2": "5.2.0"
+    "@swc/wasm": "1.2.215",
+    "@types/cookie-parser": "1.4.3",
+    "@types/cors": "2.8.12",
+    "@types/debug": "4.1.7",
+    "@types/express": "4.17.13",
+    "@types/morgan": "1.9.3",
+    "@types/node": "18.0.4",
+    "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
+    "debug": "4.3.4",
+    "express": "4.18.1",
+    "morgan": "1.10.0",
+    "pm2": "5.2.0",
+    "ts-node": "10.9.1",
+    "typescript": "4.7.4"
   }
 }
